@@ -8,25 +8,13 @@ import java.util.Scanner;
 
  class Q5 {  
     public static void main(String[] args)   {
-        
-        
-        if(args.length == 0)
-        {
-            System.out.println("Enter the argument args ");
+        int i;
+        for ( i = 0; i < 5; i++) {
+            System.out.println();
+            Update();
+            System.out.println();
         }
-        else if (args.length == 1) {
-            switch (args[0]) {
-                case "Show":
-                    result();
-                    break;
-                case "Update":
-                    Update();
-                    break;
-                default:
-                    break;
-            }
-        }
-
+           result(); 
     }
     private static void result() {
                 String file = "";
@@ -47,8 +35,9 @@ import java.util.Scanner;
                     {
                         Grand_totel+=Integer.parseInt(classed.replace("Total Value : Rs ",""));
                     }
-                    file += classed;
+                    file += classed+"\n";
                 }
+                System.out.println("Result: ");
                 System.out.println(file);
                 System.out.println("Total Value of All Products: Rs "+Grand_totel);
                 myWriter.append("Total Value of All Products: Rs "+Grand_totel+'\n'+'\n');
